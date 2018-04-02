@@ -16,6 +16,7 @@ db.createCollection('applicants', {validator: {$and: [
 
   {jobs_interest: {$type: 'array'}},
   {current_employer_name:{$type:'string'}},
+  {job_title:{$type:'string'}},
   {number_years:{$type:'number'}},
 ]}});
 
