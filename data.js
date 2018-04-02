@@ -7,10 +7,16 @@ db.dropDatabase();
 db.createCollection('applicants', {validator: {$and: [
   {first: {$type: 'string', $ne: ''}},
   {last: {$type: 'string', $ne: ''}},
-  {city: {$type: 'string', $ne: ''}},
-  {state: {$type: 'string', $ne: ''}},
+
   {skills: {$type: 'array'}},
+  {edu_level:{$type:'string'}},
+  {college_Name:{$type:'string'}},
+  {major:{$type:'string'}},
+  {degree:{$type:'string'}},
+
   {jobs_interest: {$type: 'array'}},
+  {current_employer_name:{$type:'string'}},
+  {number_years:{$type:'number'}},
 ]}});
 
 db.createCollection('employers', {validator: {$and: [
